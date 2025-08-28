@@ -1,7 +1,7 @@
 # Swim Workout Generator
 
 An AI-powered web app that generates customized NCAA-style swim workouts using Dash and OpenAI GPT-5.  
-This project demonstrates full-stack development skills: interactive UI design, API integration, secure environment configuration, and a deployment-ready structure.
+This project demonstrates full-stack development skills: interactive UI design, API integration, secure environment configuration, and a deployment-ready structure. Currently used by our varsity team during preseason to plan 6k–8k practices
 
 ---
 
