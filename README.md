@@ -17,9 +17,7 @@ This project demonstrates full-stack development skills: interactive UI design, 
 
 ## Demo
 
-<img width="1024" height="321" alt="App header and controls" src="https://github.com/user-attachments/assets/60c40647-02ec-450e-b6c6-65c991b29c07" />
-
-<img width="985" height="652" alt="Generated workout output" src="https://github.com/user-attachments/assets/328d06ad-6026-45cb-8268-2fe6af892dc1" />
+<img width="1508" height="803" alt="image" src="https://github.com/user-attachments/assets/683a55cf-d9ef-4637-a933-a8900bf4be6b" />
 
 ---
 
@@ -27,62 +25,46 @@ This project demonstrates full-stack development skills: interactive UI design, 
 
 ### Prerequisites
 - Python 3.9+
-- OpenAI API key  
+- OpenAI API key
 
-### Installation
+### Installation with uv
 
-Clone the repository:
 ```bash
+# 1. Clone the repository
 git clone https://github.com/YOUR-USERNAME/swim-workout-generator.git
 cd swim-workout-generator
+
+# 2. Install uv (if not already installed)
+curl -LsSf https://astral.sh/uv/install.sh | sh
+
+# 3. Install dependencies
+uv sync
+
+# 4. Create a .env file with your API key
+echo "OPENAI_API_KEY=your_api_key_here" > .env
+
+# 5. Run the app
+uv run python swimapp.py
 ```
 
-Set up a virtual environment:
-```bash
-python -m venv venv
-```
-
-Activate the environment:
-```bash
-source venv/bin/activate   # Mac/Linux
-venv\Scripts\activate      # Windows
-```
-
-Install dependencies:
-```bash
-pip install -r requirements.txt
-```
-
-Create a `.env` file with:
-```bash
-OPENAI_API_KEY=your_api_key_here
-```
-
-Run the app:
-```bash
-python app.py
-```
-
-Visit in your browser: http://127.0.0.1:8050/
-
----
 
 ## Project Structure
 ```
-├── app.py              # Main Dash app and callbacks
-├── requirements.txt    # Python dependencies
+├── swimapp.py          # Main Dash app and callbacks
+├── pyproject.toml      # Project dependencies (uv)
 ├── .env.example        # Example environment config (no secrets)
 ├── README.md           # Documentation
 ```
 
----
 
 ## Technologies Used
 
-- Python (Dash, dotenv)  
-- Plotly Dash for interactive UI  
-- OpenAI GPT-5 for workout generation  
-- Environment variables for secure API key handling  
+- Python 3.9+
+- Plotly Dash (UI framework)
+- dash-bootstrap-components (Bootstrap/Bootswatch styling)
+- OpenAI Python SDK (chat completions)
+- python-dotenv (loads .env config)
+- uv (dependency management & runner)
 
 ---
 
